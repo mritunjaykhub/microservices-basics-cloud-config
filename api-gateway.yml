@@ -83,10 +83,10 @@ zuul:
       path: /api/loggedinuser/**
       stripPrefix: true
       url: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/
-    ui:
-      path: /**
-      stripPrefix: false
-      serviceId: web-portal
+ #   ui:
+ #     path: /**
+ #     stripPrefix: false
+ #     serviceId: web-portal
 
 # Since our gateway is using Eureka (@EnableEurekaClient), the Gateway using Netfix Ribbon to make
 # the actual call. The ribbon call is wrapped within Hystrix so that we can handle any errors.
